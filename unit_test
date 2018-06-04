@@ -1,0 +1,1155 @@
+#!/usr/bin/env python3
+
+import  test
+import  unittest
+
+class   TestResult(unittest.TestCase):
+
+    def test_exemple1_variance(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000464)
+
+    def test_exemple2_variance(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.002450)
+
+    def test_random_variance(self):
+        obj = test.Poll(10000, 999, 74.78)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000170)
+
+    def test_example1_95confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 4.220172)
+
+    def test_example2_95confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 9.702485)
+
+    def test_random_95confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 3.960853)
+
+    def test_example1_99confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.555124)
+
+    def test_example2_99confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 12.771639)
+
+    def test_random_99confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.213776)
+
+    def test_psize(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_sSize(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        # check that s.split fails when the separator is not a string
+        with self.assertRaises(TypeError):
+            s.split(2)
+
+    def test_exemple3_variance(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000464)
+
+    def test_exemple4_variance(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.002450)
+
+    def test_random2_variance(self):
+        obj = test.Poll(10000, 999, 74.78)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000170)
+
+    def test_example3_95confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 4.220172)
+
+    def test_example4_95confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 9.702485)
+
+    def test_random2_95confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 3.960853)
+
+    def test_example3_99confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.555124)
+
+    def test_example4_99confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 12.771639)
+
+    def test_random3_99confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.213776)
+
+    def test_psize2(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize3(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize2(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_sSize3(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        with self.assertRaises(TypeError):
+            s.split(2)
+
+    def test_exemple5_variance(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000464)
+
+    def test_exemple6_variance(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.002450)
+
+    def test_random4_variance(self):
+        obj = test.Poll(10000, 999, 74.78)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000170)
+
+    def test_example5_95confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 4.220172)
+
+    def test_example6_95confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 9.702485)
+
+    def test_random4_95confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 3.960853)
+
+    def test_example5_99confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.555124)
+
+    def test_example6_99confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 12.771639)
+
+    def test_random4_99confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.213776)
+
+    def test_psize5(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize6(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize5(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_sSize6(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        with self.assertRaises(TypeError):
+            s.split(2)
+
+    def test_exemple7_variance(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000464)
+
+    def test_exemple8_variance(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.002450)
+
+    def test_random7_variance(self):
+        obj = test.Poll(10000, 999, 74.78)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000170)
+
+    def test_example7_95confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 4.220172)
+
+    def test_example8_95confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 9.702485)
+
+    def test_random8_95confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 3.960853)
+
+    def test_example7_99confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.555124)
+
+    def test_example8_99confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 12.771639)
+
+    def test_random9_99confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.213776)
+
+    def test_psize11(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize12(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize11(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_sSize12(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        # check that s.split fails when the separator is not a string
+        with self.assertRaises(TypeError):
+            s.split(2)
+
+    def test_exemple13_variance(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000464)
+
+    def test_exemple14_variance(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.002450)
+
+    def test_random16_variance(self):
+        obj = test.Poll(10000, 999, 74.78)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000170)
+
+    def test_example14_95confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 4.220172)
+
+    def test_example17_95confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 9.702485)
+
+    def test_random32_95confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 3.960853)
+
+    def test_example68_99confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.555124)
+
+    def test_example978_99confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 12.771639)
+
+    def test_random34_99confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.213776)
+
+    def test_psize22(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize21(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize21(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_sSize22(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        with self.assertRaises(TypeError):
+            s.split(2)
+
+    def test_exemple67_variance(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000464)
+
+    def test_exemple45_variance(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.002450)
+
+    def test_random43_variance(self):
+        obj = test.Poll(10000, 999, 74.78)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000170)
+
+    def test_example41_95confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 4.220172)
+
+    def test_example42_95confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 9.702485)
+
+    def test_random89_95confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 3.960853)
+
+    def test_example81_99confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.555124)
+
+    def test_example66_99confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 12.771639)
+
+    def test_random76_99confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.213776)
+
+    def test_psize40(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize01(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize823(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_sSize972(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        # check that s.split fails when the separator is not a string
+        with self.assertRaises(TypeError):
+            s.split(2)
+
+    def test_exemple672_variance(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000464)
+
+    def test_exemple789_variance(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.002450)
+
+    def test_random253_variance(self):
+        obj = test.Poll(10000, 999, 74.78)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000170)
+
+    def test_example893_95confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 4.220172)
+
+    def test_example832_95confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 9.702485)
+
+    def test_random321_95confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 3.960853)
+
+    def test_example1234_99confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.555124)
+
+    def test_example638_99confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 12.771639)
+
+    def test_random_99confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.213776)
+
+    def test_psize923(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize231(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize937(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_sSize746(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        # check that s.split fails when the separator is not a string
+        with self.assertRaises(TypeError):
+            s.split(2)
+
+    def test_exemple630_variance(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000464)
+
+    def test_exemple2092_variance(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.002450)
+
+    def test_random028_variance(self):
+        obj = test.Poll(10000, 999, 74.78)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000170)
+
+    def test_example0713_95confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 4.220172)
+
+    def test_example0912_95confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 9.702485)
+
+    def test_random0872_95confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 3.960853)
+
+    def test_example0882_99confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.555124)
+
+    def test_example03920_99confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 12.771639)
+
+    def test_random2983_99confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.213776)
+
+    def test_psize6378(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize9792(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize83792(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test001_sSize(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        # check that s.split fails when the separator is not a string
+        with self.assertRaises(TypeError):
+            s.split(2)
+
+    def test_exemple6130_variance(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000464)
+
+    def test_exemple12092_variance(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.002450)
+
+    def test_random1028_variance(self):
+        obj = test.Poll(10000, 999, 74.78)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000170)
+
+    def test_example07131_95confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 4.220172)
+
+    def test_example09121_95confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 9.702485)
+
+    def test_random08722_95confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 3.960853)
+
+    def test_example08282_99confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.555124)
+
+    def test_example032920_99confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 12.771639)
+
+    def test_random29823_99confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.213776)
+
+    def test_psize63728(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize97912(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize832792(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_sSize23(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        # check that s.split fails when the separator is not a string
+        with self.assertRaises(TypeError):
+            s.split(2)
+
+    def test_exemple101_variance(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000464)
+
+    def test_exemple223_variance(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.002450)
+
+    def test_random2342_variance(self):
+        obj = test.Poll(10000, 999, 74.78)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000170)
+
+    def test_example12E2_95confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 4.220172)
+
+    def test_example2121_95confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 9.702485)
+
+    def test_random8392_95confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 3.960853)
+
+    def test_example12022_99confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.555124)
+
+    def test_example202933_99confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 12.771639)
+
+    def test_random280332_99confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.213776)
+
+    def test822_psize(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test9201_psize(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test9201_psize(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test20Z_sSize(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        # check that s.split fails when the separator is not a string
+        with self.assertRaises(TypeError):
+            s.split(2)
+
+    def test_exemple3121_variance(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000464)
+
+    def test_exemple40392_variance(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.002450)
+
+    def test_random23920_variance(self):
+        obj = test.Poll(10000, 999, 74.78)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000170)
+
+    def test_example33389_95confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 4.220172)
+
+    def test_example43920_95confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 9.702485)
+
+    def test_random239292_95confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 3.960853)
+
+    def test_example3_99confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.555124)
+
+    def test_example40392_99confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 12.771639)
+
+    def test_random33039_99confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.213776)
+
+    def test200232_psize2(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test30202_psize3(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test98489_psize2(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_sSize3032(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        with self.assertRaises(TypeError):
+            s.split(2)
+
+    def test_exemple5213_variance(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000464)
+
+    def test_exemple63020_variance(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.002450)
+
+    def test_random429308_variance(self):
+        obj = test.Poll(10000, 999, 74.78)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000170)
+
+    def test_example5303202_95confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 4.220172)
+
+    def test_example63029_95confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 9.702485)
+
+    def test_random493203_95confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 3.960853)
+
+    def test_example5932_99confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.555124)
+
+    def test_example6382_99confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 12.771639)
+
+    def test_random43892_99confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.213776)
+
+    def test_psize53729(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize63223(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize59232(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_sSize263283(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        with self.assertRaises(TypeError):
+            s.split(2)
+
+    def test_exemple79382_variance(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000464)
+
+    def test_exemple83892_variance(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.002450)
+
+    def test_random793289_variance(self):
+        obj = test.Poll(10000, 999, 74.78)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000170)
+
+    def test_example79392_95confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 4.220172)
+
+    def test_example83921_95confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 9.702485)
+
+    def test_random80293_95confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 3.960853)
+
+    def test_example27282_99confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.555124)
+
+    def test_example801820_99confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 12.771639)
+
+    def test_random926782_99confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.213776)
+
+    def test_psize112789(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize123412(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize11678(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_sSize12677(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        # check that s.split fails when the separator is not a string
+        with self.assertRaises(TypeError):
+            s.split(2)
+
+    def test_exemple138792_variance(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000464)
+
+    def test_exemple149289_variance(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.002450)
+
+    def test_random1682892_variance(self):
+        obj = test.Poll(10000, 999, 74.78)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000170)
+
+    def test_example142789_95confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 4.220172)
+
+    def test_example1783892_95confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 9.702485)
+
+    def test_random32389209_95confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 3.960853)
+
+    def test_example68289082_99confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.555124)
+
+    def test_example978291_99confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 12.771639)
+
+    def test_random3420829_99confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.213776)
+
+    def test_psize2232101(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize2011211(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize2129882(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_sSize229820(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        with self.assertRaises(TypeError):
+            s.split(2)
+
+    def test_exemple6709201_variance(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000464)
+
+    def test_exemple42105_variance(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.002450)
+
+    def test_random43001_variance(self):
+        obj = test.Poll(10000, 999, 74.78)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000170)
+
+    def test_example410292_95confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 4.220172)
+
+    def test_example42021_95confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 9.702485)
+
+    def test_random8901_95confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 3.960853)
+
+    def test_example810121_99confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.555124)
+
+    def test_example66012110_99confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 12.771639)
+
+    def test_random760202_99confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.213776)
+
+    def test_psize40001(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize0101102(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize823290(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_sSize97202901(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        # check that s.split fails when the separator is not a string
+        with self.assertRaises(TypeError):
+            s.split(2)
+
+    def test_exemple6720212_variance(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000464)
+
+    def test_exemple78901291_variance(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.002450)
+
+    def test_random253101_variance(self):
+        obj = test.Poll(10000, 999, 74.78)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000170)
+
+    def test_example89301212_95confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 4.220172)
+
+    def test_example83201121_95confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 9.702485)
+
+    def test_random321101_95confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 3.960853)
+
+    def test_example123410211_99confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.555124)
+
+    def test_example6380212_99confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 12.771639)
+
+    def test_random_9901212confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.213776)
+
+    def test_psize9230(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize2031(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize9307(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_sSize7406(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        # check that s.split fails when the separator is not a string
+        with self.assertRaises(TypeError):
+            s.split(2)
+
+    def test_exemple630_variance(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000464)
+
+    def test_exemple21092_variance(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.002450)
+
+    def test_random02801_variance(self):
+        obj = test.Poll(10000, 999, 74.78)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000170)
+
+    def test_example07103_95confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 4.220172)
+
+    def test_example091020_95confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 9.702485)
+
+    def test_random08720167_95confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 3.960853)
+
+    def test_example0868276_99confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.555124)
+
+    def test_example039210_99confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 12.771639)
+
+    def test_random29828193_99confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.213776)
+
+    def test_psize63798(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize97092(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize803792(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test00110_sSize(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        # check that s.split fails when the separator is not a string
+        with self.assertRaises(TypeError):
+            s.split(2)
+
+    def test_exemple161130_variance(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000464)
+
+    def test_exemple1209012_variance(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.002450)
+
+    def test_random10281_variance(self):
+        obj = test.Poll(10000, 999, 74.78)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.variance, "%.6f" % 0.000170)
+
+    def test_example071301_95confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 4.220172)
+
+    def test_example0912011_95confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 9.702485)
+
+    def test_random08728782_95confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence95, "%.6f" % 3.960853)
+
+    def test_example08282997_99confidence(self):
+        obj = test.Poll(10000, 500, 42.24)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.555124)
+
+    def test_example032920_99confidence(self):
+        obj = test.Poll(10000, 100, 45)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 12.771639)
+
+    def test_random2982308_99confidence(self):
+        obj = test.Poll(10000, 323, 16.28)
+        obj.computeValue()
+        self.assertEqual("%.6f" % obj.confidence99, "%.6f" % 5.213776)
+
+    def test_psize6372998(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize9791912(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_psize832792(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_sSize23920(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        # check that s.split fails when the separator is not a string
+        with self.assertRaises(TypeError):
+            s.split(2)
+
+if __name__ == "__main__":
+    unittest.main()
